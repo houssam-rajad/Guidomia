@@ -13,5 +13,6 @@ data class CarModel(
     val marketPrice: Double,
     val model: String,
     val prosList: List<String>,
-    val rating: Int
+    val rating: Int,
+    var isExpanded: Boolean = false
 )

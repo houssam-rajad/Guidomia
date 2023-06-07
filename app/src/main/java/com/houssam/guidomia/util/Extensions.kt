@@ -36,4 +36,4 @@ fun CarEntity.toCarModel(): CarModel =
 fun List<CarEntity>.toCarModelList(): List<CarModel> =
     map { it.toCarModel() }
 
-fun Double.toFormattedPricing(): String = this.div(1000).toInt().toString()+ " K"
+fun Double.toFormattedPricing(): String = this.div(1000).toInt().toString()+ "K"
