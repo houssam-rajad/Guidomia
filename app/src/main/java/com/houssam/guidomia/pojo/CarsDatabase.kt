@@ -20,9 +20,6 @@ import javax.inject.Provider
 @TypeConverters(CarConverter::class)
 abstract class CarsDatabase : RoomDatabase() {
     abstract fun carsDao(): CarsDao
-
-
-
     class PrepopulateCallback @Inject constructor(
         @ApplicationContext private val context: Context,
         private val carDao: Provider<CarsDao>) : Callback() {

@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 
 data class CarModel(
     val id: Int=0,
-    val image:String= "",
+    val image:String,
     val consList: List<String>,
     val customerPrice: Double,
     val make: String,

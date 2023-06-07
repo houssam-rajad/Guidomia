@@ -25,7 +25,7 @@
             tools:background="@drawable/alpine_roadster" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/car_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -37,28 +37,28 @@
             app:layout_constraintTop_toTopOf="@+id/row_image_view" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/car_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="@string/car_name"
+            android:text="@string/car_price"
             android:textColor="@color/guidomia_dark_gray"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/row_image_view"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/car_name" />
 
         <RatingBar
             android:id="@+id/rating"
             style="@style/RatingBar"
+            android:theme="@style/RatingBar"
             android:layout_width="wrap_content"
             android:layout_height="15dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:isIndicator="true"
             android:numStars="5"
             app:layout_constraintStart_toEndOf="@+id/row_image_view"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/car_price" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
