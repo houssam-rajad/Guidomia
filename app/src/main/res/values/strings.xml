@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Guidomia</string>
+    <string name="app_name_title">Tacoma 2021</string>
+    <string name="app_descriptionText">Get yours now</string>
+    <string name="filter">Filters</string>
+    <string name="any_make">   Any make</string>
+    <string name="any_model">   Any model</string>
 </resources>
