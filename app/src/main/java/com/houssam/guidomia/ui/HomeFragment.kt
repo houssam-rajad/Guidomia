@@ -1,6 +1,8 @@
 package com.houssam.guidomia.ui
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -36,8 +38,40 @@ class HomeFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupListeners()
         setupObservers()
         viewModel.getAllCars()
+    }
+
+    private fun setupListeners() {
+        var filteredMake = ""
+        var filteredModel = ""
+        binding.filterBlock.makeEditText.addTextChangedListener(object: TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                filteredMake = s.toString()
+                viewModel.filterListByMakeAndModel(Pair(filteredMake, filteredModel))
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+        })
+        binding.filterBlock.modelEditText.addTextChangedListener(object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                filteredModel = s.toString()
+                viewModel.filterListByMakeAndModel(Pair(filteredMake, filteredModel))
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+        })
+
     }
 
     private fun setupObservers() {
@@ -60,6 +94,11 @@ class HomeFragment: Fragment() {
             }
             Log.d("list is", carsList.data.toString())
 
+        }
+
+        viewModel.filterList.observe(viewLifecycleOwner){
+            adapter.carsList = it
+            binding.carRecyclerView.adapter = adapter
         }
     }
 
