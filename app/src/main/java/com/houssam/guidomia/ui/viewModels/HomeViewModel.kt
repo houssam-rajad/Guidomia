@@ -1,11 +1,11 @@
-package com.houssam.guidomia.ui
+package com.houssam.guidomia.ui.viewModels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.houssam.guidomia.data.domain.usecases.GetAllCarsUseCase
-import com.houssam.guidomia.pojo.CarModel
+import com.houssam.guidomia.domain.usecases.GetAllCarsUseCase
+import com.houssam.guidomia.domain.pojo.CarModel
 import com.houssam.guidomia.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest

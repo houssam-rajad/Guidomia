@@ -1,4 +1,4 @@
-package com.houssam.guidomia.pojo
+package com.houssam.guidomia.domain.pojo
 
 import kotlinx.serialization.Serializable
 

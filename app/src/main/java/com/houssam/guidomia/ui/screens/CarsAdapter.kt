@@ -1,4 +1,4 @@
-package com.houssam.guidomia.ui
+package com.houssam.guidomia.ui.screens
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView.VISIBLE
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.houssam.guidomia.R
 import com.houssam.guidomia.databinding.ItemRowBinding
-import com.houssam.guidomia.pojo.CarModel
+import com.houssam.guidomia.domain.pojo.CarModel
 import com.houssam.guidomia.util.toFormattedPricing
 
 

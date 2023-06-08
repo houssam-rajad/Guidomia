@@ -2,13 +2,13 @@ package com.houssam.guidomia.di
 
 import android.app.Application
 import androidx.room.Room
-import com.houssam.guidomia.data.domain.usecases.GetAllCarsUseCase
-import com.houssam.guidomia.data.local.CarsRepository
-import com.houssam.guidomia.data.local.CarsRepositoryImp
-import com.houssam.guidomia.data.local.DataSource
-import com.houssam.guidomia.data.local.LocalDataSourceImp
-import com.houssam.guidomia.pojo.CarsDao
-import com.houssam.guidomia.pojo.CarsDatabase
+import com.houssam.guidomia.domain.usecases.GetAllCarsUseCase
+import com.houssam.guidomia.data.repository.CarsRepository
+import com.houssam.guidomia.data.repository.CarsRepositoryImp
+import com.houssam.guidomia.data.repository.DataSource
+import com.houssam.guidomia.data.repository.LocalDataSourceImp
+import com.houssam.guidomia.data.room.CarsDao
+import com.houssam.guidomia.data.room.CarsDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

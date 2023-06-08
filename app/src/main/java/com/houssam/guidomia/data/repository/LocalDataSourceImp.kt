@@ -1,8 +1,8 @@
-package com.houssam.guidomia.data.local
+package com.houssam.guidomia.data.repository
 
-import com.houssam.guidomia.pojo.CarEntity
-import com.houssam.guidomia.pojo.CarModel
-import com.houssam.guidomia.pojo.CarsDao
+import com.houssam.guidomia.data.room.CarEntity
+import com.houssam.guidomia.domain.pojo.CarModel
+import com.houssam.guidomia.data.room.CarsDao
 import com.houssam.guidomia.util.Resource
 import com.houssam.guidomia.util.toCarModelList
 import kotlinx.coroutines.flow.Flow

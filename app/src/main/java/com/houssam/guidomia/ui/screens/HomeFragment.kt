@@ -1,4 +1,4 @@
-package com.houssam.guidomia.ui
+package com.houssam.guidomia.ui.screens
 
 import android.os.Bundle
 import android.text.Editable
@@ -11,7 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.houssam.guidomia.databinding.HomeFragmentBinding
-import com.houssam.guidomia.pojo.CarModel
+import com.houssam.guidomia.domain.pojo.CarModel
+import com.houssam.guidomia.ui.viewModels.HomeViewModel
 import com.houssam.guidomia.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
 

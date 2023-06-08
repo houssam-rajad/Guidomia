@@ -1,4 +1,4 @@
-package com.houssam.guidomia.pojo
+package com.houssam.guidomia.data.room
 
 import android.content.Context
 import androidx.room.Database
@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.houssam.guidomia.R
-import com.houssam.guidomia.data.local.CarConverter
+import com.houssam.guidomia.domain.pojo.CarModel
 import com.houssam.guidomia.util.toEntity
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope

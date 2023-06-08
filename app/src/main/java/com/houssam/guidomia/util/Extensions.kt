@@ -1,7 +1,7 @@
 package com.houssam.guidomia.util
 
-import com.houssam.guidomia.pojo.CarEntity
-import com.houssam.guidomia.pojo.CarModel
+import com.houssam.guidomia.data.room.CarEntity
+import com.houssam.guidomia.domain.pojo.CarModel
 
 
 fun CarModel.toEntity(): CarEntity

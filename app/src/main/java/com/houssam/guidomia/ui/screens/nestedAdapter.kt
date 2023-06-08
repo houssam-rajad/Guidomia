@@ -1,4 +1,4 @@
-package com.houssam.guidomia.ui
+package com.houssam.guidomia.ui.screens
 
 import android.content.Context
 import android.view.LayoutInflater

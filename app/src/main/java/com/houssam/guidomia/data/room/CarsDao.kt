@@ -1,4 +1,4 @@
-package com.houssam.guidomia.pojo
+package com.houssam.guidomia.data.room
 
 import androidx.room.Dao
 import androidx.room.Insert

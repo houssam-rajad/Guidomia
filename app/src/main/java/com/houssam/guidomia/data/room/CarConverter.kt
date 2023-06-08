@@ -1,4 +1,4 @@
-package com.houssam.guidomia.data.local
+package com.houssam.guidomia.data.room
 
 import androidx.room.TypeConverter
 import kotlinx.serialization.encodeToString

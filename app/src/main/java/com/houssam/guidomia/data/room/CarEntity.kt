@@ -1,4 +1,4 @@
-package com.houssam.guidomia.pojo
+package com.houssam.guidomia.data.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
