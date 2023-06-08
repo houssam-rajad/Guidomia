@@ -20,30 +20,28 @@ class CarsAdapter : RecyclerView.Adapter<CarsAdapter.CarViewHolder>() {
     var carsList: List<CarModel> = listOf()
     var previouslyClicked: Int = -1
 
-    class CarViewHolder(val context: Context, val binding: ItemRowBinding, val list: List<CarModel>) :
-        ViewHolder(binding.root) {
+    class CarViewHolder(
+        val context: Context, val binding: ItemRowBinding, val list: List<CarModel>
+    ) : ViewHolder(binding.root) {
         var nestedAdapter = NestedAdapter()
 
         fun bind(position: Int) {
             val carToSee = list[position]
             binding.carName.text = context.getString(R.string.car_name, carToSee.model)
             binding.carPrice.text =
-                context.getString(R.string.car_name, carToSee.marketPrice.toFormattedPricing())
+                context.getString(R.string.car_price, carToSee.marketPrice.toFormattedPricing())
             binding.rating.rating = carToSee.rating.toFloat()
             binding.rowImageView.background = when (carToSee.image) {
                 context.resources.getResourceEntryName(R.drawable.range_rover) -> AppCompatResources.getDrawable(
-                    context,
-                    R.drawable.range_rover
+                    context, R.drawable.range_rover
                 )
 
                 context.resources.getResourceEntryName(R.drawable.alpine_roadster) -> AppCompatResources.getDrawable(
-                    context,
-                    R.drawable.alpine_roadster
+                    context, R.drawable.alpine_roadster
                 )
 
                 context.resources.getResourceEntryName(R.drawable.mercedez_benz_glc) -> AppCompatResources.getDrawable(
-                    context,
-                    R.drawable.mercedez_benz_glc
+                    context, R.drawable.mercedez_benz_glc
                 )
 
                 else -> AppCompatResources.getDrawable(context, R.drawable.bmw_330i)
@@ -52,21 +50,18 @@ class CarsAdapter : RecyclerView.Adapter<CarsAdapter.CarViewHolder>() {
             //animation Can still be added here for Expanding and Collapsing
             binding.nestedLayout.visibility = if (list[position].isExpanded) VISIBLE else GONE
 
-            if(list[position].consList.isEmpty()) {
+            if (list[position].consList.isEmpty()) {
                 binding.consRv.visibility = GONE
                 binding.cons.visibility = GONE
-            }
-            else {
+            } else {
                 nestedAdapter.prosOrConsList = list[position].consList.filter { it.length != 0 }
                 binding.consRv.adapter = nestedAdapter
                 binding.consRv.layoutManager = LinearLayoutManager(context)
             }
-            if(list[position].prosList.isEmpty())
-            {
+            if (list[position].prosList.isEmpty()) {
                 binding.prosRv.visibility = GONE
                 binding.pros.visibility = GONE
-            }
-            else {
+            } else {
                 nestedAdapter = NestedAdapter()
                 nestedAdapter.prosOrConsList = list[position].prosList.filter { it.length != 0 }
                 binding.prosRv.adapter = nestedAdapter
@@ -88,7 +83,8 @@ class CarsAdapter : RecyclerView.Adapter<CarsAdapter.CarViewHolder>() {
             if (previouslyClicked != -1) notifyItemChanged(previouslyClicked)
             previouslyClicked = position
 
-            holder.binding.nestedLayout.visibility = if (!carsList[position].isExpanded) VISIBLE else GONE
+            holder.binding.nestedLayout.visibility =
+                if (!carsList[position].isExpanded) VISIBLE else GONE
 
             carsList[position].isExpanded = !carsList[position].isExpanded
             carsList.forEach {
